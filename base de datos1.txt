@@ -13,7 +13,7 @@ show tables;
 describe agenda;
 drop table, if exists;
 drop table agenda;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+****************************************************************
 4) drop table if existes agenda;
 create table agenda(
 nombre varchar(20),
@@ -28,7 +28,7 @@ insert into agenda (nombre, domicilio, telefono) values
 select nombre, domicilio, telefono from agenda;
 drop table if exists agenda:
 drop table agenda;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*********************************************************************
 5)drop table if exists peliculas;
 create table peliculas(
   nombre varchar(20),
@@ -46,7 +46,7 @@ describe peliculas;
  insert into peliculas (nombre, actor, duracion, cantidad)
   values ('Elsa y Fred','China Zorrilla',90,2);
 select * from peliculas;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*******************************************************************
 6)drop table if exists peliculas;
 create table peliculas(
   titulo varchar(20),
@@ -66,7 +66,7 @@ create table peliculas(
 select titulo,actor from peliculas;
 select titulo,duracion from peliculas;
 select titulo,cantidad from peliculas;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*********************************************************************
 7)drop table if exists agenda;
 create table agenda(
 nombre varchar (20),
@@ -82,7 +82,7 @@ select nombre from agenda where nombre= 'Juan Torres';
 select domicilio from agenda where domicilio= 'colon123';
 select telefono from agenda where telefono= '4545454'
 drop table agenda;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+***************************************************************************
 8) drop table if exists articulos;
  create table articulos(
   codigo integer,
@@ -101,14 +101,14 @@ describe articulos;
  insert into articulos (codigo, nombre, descripcion, precio,cantidad)
   values (4,'teclado','ingles Biswal',100,50);
  insert into articulos (codigo, nombre, descripcion, precio,cantidad)
-  values (5,'teclado','español Biswal',90,50);
+  values (5,'teclado','espaÃ±ol Biswal',90,50);
 select * from articulos;
 select * from arcticulos where nombre='impresora';
 select * from articulos
    where precio>=500;
 select nombre,descripcion, precio,cantidad from articulos where cantidad<30;
 select nombre, descripcion from articulos where precio<>100;
-////////////////////////////////////////////////////
+**********************************************************************************
 9)drop table if exists agenda;
 create table agenda(
   apellido varchar(30),
@@ -125,7 +125,7 @@ insert into agenda(apellido,nombre,domicilio,telefono) values('Peralta','Susana'
 
 delete from agenda where nombre='Juan';
 delete from agenda where telefono='4545454';
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+************************************************************************************
 10) drop table if exists agenda;
  create table agenda(
   apellido varchar(30),
@@ -142,7 +142,7 @@ insert into agenda(apellido,nombre,domicilio,telefono) values('Peralta','Susana'
 update agenda set nombre='Juan Jose' where nombre='Juan';
 update agenda set telefono='4445566' where telefono='4545454';
 update agenda set nombre='Juan Jose' where nombre='Juan';
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+************************************************
 11) drop table if exists libros;
 create table libros(
   codigo integer,
@@ -161,7 +161,7 @@ select * from libros;
 insert into libros( codigo,autor) values(6,'Borges');
 insert into libros(codigo,titulo,editorial) values(7,'Martin Fierro','Emece');
 insert into libros(codigo) values(2);
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+********************************************************************************
 12) drop table if exists medicamentos;
 create table medicamentos(
   codigo integer auto_increment,
@@ -190,7 +190,7 @@ values(12,'Paracetamol 500','Bago',1.90,200);
 
 insert into medicamentos (nombre, laboratorio,precio,cantidad)
 values('Bayaspirina','Bayer',2.10,150);
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*****************************************
 13) drop table if exists  medicamentos;
 create table medicamentos(
   codigo integer auto_increment,
@@ -216,7 +216,7 @@ truncate table medicamentos;
 insert into medicamentos (nombre, laboratorio,precio,cantidad)
 values('Buscapina','Roche',4.10,200);
 describe medicamentos;
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+**********************************************************************
 14) drop table if exists medicamentos;
  create table medicamentos(
   codigo integer auto_increment,
@@ -256,7 +256,7 @@ select * from medicamentos where precio<>0;
 select * from medicamentos where precio is not null;
 select * from medicamentos where laboratorio<>'';
 select * from medicamentos where laboratorio is not null;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+**************************************************************************************
 15) drop table if exists peliculas;
  create table peliculas(
   codigo integer unsigned auto_increment,
@@ -266,7 +266,7 @@ select * from medicamentos where laboratorio is not null;
   primary key(codigo)
  );
 describe peliculas;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+************************************************************************
 17) drop table if exists autos;
  create table autos(
   patente char(6),
@@ -289,7 +289,7 @@ describe peliculas;
   values('BVF543','Fiat 128','1975',20000);
 select * from autos where modelo='1990';
 select * from autos where precio>50000;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*******************************************************************
 18) drop table if exists pedidos;
 create table pedidos(
 Npedido integer unsigned auto_increment,
@@ -298,23 +298,23 @@ tipo varchar (20),
 precio float(2,2) unsigned,
 cantidad integer(199) unsigned,
 domicilio varchar(30));
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+**********************************************************************
 19) drop table if exists autos;
 create table autos(
   marca varchar(15),
   modelo year,
-  dueño varchar(30),
+  dueÃ±o varchar(30),
   precio decimal (8,2) unsigned  
  );
-insert into autos(marca,modelo,dueño,precio) values('Fiat 128','1970','Juan Lopez',50000);
-insert into autos(marca,modelo,dueño,precio) values('Renault 11','1990','Juan Lopez',80000);
-insert into autos(marca,modelo,dueño,precio) values('Fiat 128','1971','Ana Ferreyra',51000);
-insert into autos(marca,modelo,dueño,precio) values('Peugeot 505','1998','Luis Luque',99000);
-insert into autos(marca,modelo,dueño,precio) values('Peugeot 505','1997','Carola Perez',85000);
+insert into autos(marca,modelo,dueÃ±o,precio) values('Fiat 128','1970','Juan Lopez',50000);
+insert into autos(marca,modelo,dueÃ±o,precio) values('Renault 11','1990','Juan Lopez',80000);
+insert into autos(marca,modelo,dueÃ±o,precio) values('Fiat 128','1971','Ana Ferreyra',51000);
+insert into autos(marca,modelo,dueÃ±o,precio) values('Peugeot 505','1998','Luis Luque',99000);
+insert into autos(marca,modelo,dueÃ±o,precio) values('Peugeot 505','1997','Carola Perez',85000);
 select * from autos where modelo<1995;
 select marca,modelos from autos where <>1970;
-insert into autos(marca,modelo,dueño,precio) values('Peugeot 505',1995,'Carlos Lopez',88000);
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+insert into autos(marca,modelo,dueÃ±o,precio) values('Peugeot 505',1995,'Carlos Lopez',88000);
+*************************************************************************************************
 20)drop table if exists peliculas;
 create table peliculas(
 codigo integer unsigned auto_increment,
